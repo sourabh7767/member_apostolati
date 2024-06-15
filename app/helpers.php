@@ -4,6 +4,7 @@ use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Permission;
 use App\Models\RolePermission;
+use Illuminate\Support\Facades\Storage;
 
 
 const RECORD_PER_PAGE = 10;
@@ -70,8 +71,8 @@ function hasPermission($permissionType){
 function saveUploadedFile($file, $folder = "images")
 {
     $fileName = rand() . '_' . time() . '.' . $file->getClientOriginalExtension();
-    Storage::disk($folder)->putFileAs('/', $file, $fileName);
-    return Storage::disk($folder)->url($fileName);
+    return Storage::disk($folder)->putFileAs('/', $file, $fileName);
+    // return Storage::disk($folder)->url($fileName);
 }
 
 

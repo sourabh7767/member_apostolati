@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+nav{
+    /* background-color: white; */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 16px;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+.landingPage {
+    background: linear-gradient(-45deg, #a5604b, #413238, #755a8d, #2bcda7);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.landingHeading{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+}
+.content{
+    height: calc(100vh - 200px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.getStartBtn {
+    border: none;
+    background-color: #ffffff61;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffffb0;
+    box-shadow: 4px 4px 9px 5px #dad1d130;
+    cursor: pointer;
+}
+.getStartBtn:hover {
+    background-color: #000;
+    background-color: #0000003b;
+    color: #fff;
+}
+.getStartedModal .btn-close {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    box-shadow: none !important;
+}
+.modal-header, .modal-footer{
+    border: none !important;
+}
+
+.modal-title{
+    font-size: 24px;
+    font-weight: 600;
+}
+.modal-content {
+    border-radius: 20px !important;
+    padding: 0 20px !important;
+    box-shadow: rgb(124 33 167 / 21%) 4px 4px 9px 5px;
+    border: none !important;
+}
+.inputBox {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #c8bbbb;
+    outline: #7c21a7 !important;
+    font-size: 14px;
+    font-weight: 400;
+    color: #564f4f;
+}
+.inputBox:focus {
+    border: 1px solid #7c21a7;
+}
+.getStartedModal .modal-dialog{
+    max-width: 570px;
+}
+.inputContainer{
+   height: 50vh;
+    overflow-y: auto;
+   overflow-x: hidden;
+}
+.labelTxt{
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #413238;
+}
+.addMorBtn{
+    border: 1px solid #7c21a7;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 11px;
+    background-color: #fff;
+     color: #7c21a7 ;
+}
+button.submitBtn {
+    background: rgba(124, 33, 167, 0.85);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 12px;
+    box-shadow: rgb(124 33 167 / 21%) 4px 4px 9px 5px;
+    margin-bottom: 15px;
+}

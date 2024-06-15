@@ -72,8 +72,8 @@ class LoginController extends Controller
     public function logout(Request $request)
     {
 
-        Auth::logout(); // logout user
-        return redirect('/login');
+        \Illuminate\Support\Facades\Auth::logout(); // logout user
+        return redirect('/admin/login');
     }
     public function forbidden()
     {

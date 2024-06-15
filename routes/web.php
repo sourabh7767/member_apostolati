@@ -1,5 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +27,10 @@ Route::middleware('prevent-back-history')->group(function () {
         return Redirect::back()->with('success', 'All cache cleared successfully.');
     });
 
-    Auth::routes();
+    Route::prefix('admin')->group(function () {
+        Auth::routes();
+    });
+    
     Route::get('/forbidden', 'Auth\LoginController@forbidden')->name('forbidden');
     Route::get('signup', 'User\AuthController@signup')->name('user.signup');
     Route::get('user/login', 'User\AuthController@login')->name('user.login');
