@@ -26,7 +26,7 @@
                 <h5><b>Change Password</b></h5>
             </div>
             <div class="card-body">
-                <form method="POST" action="">
+                <form method="POST" action="{{route("admin.changePassword.submit")}}">
                     @csrf
                      <div class="form-group">
                     <div class="row">
