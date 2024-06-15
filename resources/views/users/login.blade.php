@@ -44,7 +44,7 @@
 							<a href=""><button type="submit" class="btn">Login</button></a>
 						</div>
 						<div class="text-white mb-3">or login with</div>
-						<div class="row mb-3">
+						{{-- <div class="row mb-3">
 							<div class="col-4">
 								<a href="" class="btn btn-block btn-social btn-facebook">
 									<i class="fa fa-facebook"></i>
@@ -60,7 +60,7 @@
 									<i class="fa fa-twitter"></i>
 								</a>
 							</div>
-						</div>
+						</div> --}}
 						<div class="text-white">Don't have an account?
 							<a href="{{route('user.signup')}}" class="register-link">Register here</a>
 						</div>

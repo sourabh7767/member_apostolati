@@ -23,7 +23,11 @@
 					<form action="{{route('user.login')}}">
 						<div class="form-input">
 							<span><i class="fa fa-user"></i></span>
-							<input type="text" placeholder="Full Name" required>
+							<input type="text" placeholder="First Name" required>
+						</div>
+						<div class="form-input">
+							<span><i class="fa fa-user"></i></span>
+							<input type="text" placeholder="Last Name" required>
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-envelope"></i></span>
@@ -32,6 +36,16 @@
 						<div class="form-input">
 							<span><i class="fa fa-lock"></i></span>
 							<input type="password" placeholder="Password" required>
+						</div>
+						<div class="form-input">
+							<span><i class="fa fa-lock"></i></span>
+							<select name="" id="">
+								<option value="">India</option>
+								<option value="">Pakistan</option>
+								<option value="">USA</option>
+								<option value="">UAE</option>
+								<option value="">Canada</option>
+							</select>
 						</div>
 						<div class="row mb-3">
 							<div class="col-12 d-flex">
@@ -45,7 +59,7 @@
 							<a href=""><button type="submit" class="btn">Register</button></a>
 						</div>
 						<div class="text-white mb-3">or register with</div>
-						<div class="row mb-3">
+						{{-- <div class="row mb-3">
 							<div class="col-4">
 								<a href="" class="btn btn-block btn-social btn-facebook">
 									<i class="fa fa-facebook"></i>
@@ -61,7 +75,7 @@
 									<i class="fa fa-twitter"></i>
 								</a>
 							</div>
-						</div>
+						</div> --}}
 						<div class="text-white">Already have an account?
 							<a href="{{route("user.login")}}" class="login-link">Login here</a>
 						</div>
