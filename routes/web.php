@@ -40,7 +40,7 @@ Route::middleware('prevent-back-history')->group(function () {
 
     Route::middleware(['auth', 'CheckRoleAdmin'])->group(function () {
 
-        Route::get('/', 'HomeController@index')->name('admin.home');
+        Route::get('/admin/dashboard', 'HomeController@index')->name('admin.home');
         Route::resource('users', 'Admin\UserController');
         Route::resource('role', 'Admin\RoleController');
         Route::get('/admin/changeStatus/{id}', 'Admin\UserController@changeStatus')->name('admin.changeStatus');
