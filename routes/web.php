@@ -32,7 +32,7 @@ Route::middleware('prevent-back-history')->group(function () {
     });
     
     Route::get('/forbidden', 'Auth\LoginController@forbidden')->name('forbidden');
-    Route::get('signup', 'User\AuthController@signup')->name('user.signup');
+    Route::any('signup', 'User\AuthController@signup')->name('user.signup');
     Route::get('user/login', 'User\AuthController@login')->name('user.login');
     Route::get('forgetPassword', 'User\AuthController@forgetPassword')->name('user.forgetPassword');
     

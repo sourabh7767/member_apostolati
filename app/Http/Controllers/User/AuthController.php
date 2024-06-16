@@ -6,10 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Models\Club;
 use App\Models\User;
 use Carbon\Carbon;
-use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
+use Validator;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request as FacadesRequest;
+use Illuminate\Support\Facades\Validator as FacadesValidator;
+use Illuminate\Validation\Validator as ValidationValidator;
 
 class AuthController extends Controller
 {
@@ -28,7 +31,7 @@ class AuthController extends Controller
         ]);
     
         if ($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()], 422);
+            return Redirect::back()->withInput()->withErrors($validator);
         }
 
         // Create a new user
@@ -38,9 +41,10 @@ class AuthController extends Controller
             'country' => $request->input('country'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
-            // 'email_verified_at' => Carbon::now(),
+            'email_verified_at' => Carbon::now(),
         ]);
-        return response()->json(['success'=> true,'Signup successful'],200);
+        session()->flash('success','Signup successful');
+        return redirect()->route('user.login')->with('success','Signup successful');
         }
     }
     public function login()
