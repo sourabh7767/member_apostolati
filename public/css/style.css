@@ -124,3 +124,14 @@
     background: #2eb7e5;
     color: #fff;
 }
+
+
+
+@media only screen and (max-width: 768px) {
+    .form-container{
+        background: url('/images/joseph1.jpg') ;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+    }
+  }

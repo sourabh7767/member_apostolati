@@ -1,8 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+   
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }  
 body{
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
+    background: linear-gradient(-45deg, #a5604b, #413238, #755a8d, #2bcda7);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+header{
+
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 nav{
@@ -15,6 +45,7 @@ nav ul{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-bottom: 0;
 }
 nav li{
     height: 50px;
@@ -73,10 +104,11 @@ nav li:first-child{
 }
 
 .landingPage {
-    background: linear-gradient(-45deg, #a5604b, #413238, #755a8d, #2bcda7);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+  
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes gradient {
@@ -95,12 +127,12 @@ nav li:first-child{
     font-size: 30px;
     font-weight: 400;
 }
-.content{
+/* .content{
     height: calc(100vh - 200px);
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 .getStartBtn {
     border: none;
     background-color: #ffffff61;
@@ -184,4 +216,47 @@ button.submitBtn {
     border-radius: 12px;
     box-shadow: rgb(124 33 167 / 21%) 4px 4px 9px 5px;
     margin-bottom: 15px;
+}
+.table-section{
+    margin-top: 60px;
+    padding: 20px;
+}
+.dataInfo {
+    height: calc(100vh - 220px);
+    overflow: auto;
+    margin-top: 20px;
+    /* padding: 0px 20px; */
+    border-radius: 20px;
+    box-shadow: 2px 6px 12px 10px #eeeeee24;
+}
+table{
+    border-collapse: separate !important;
+    border-spacing: 0px 5px;
+    background-color: transparent !important;
+}
+th, td{
+    background-color: transparent !important;
+}
+.tableUprHead {
+    color: #ffffff94;
+    font-size: 30px;
+    font-weight: 700;
+}
+.tableData, .tableHead{
+    padding: 10px 10px;
+    /* border-top: 1px solid #eeeeee29; */
+}
+.tableHead{
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+}
+.tableData{
+    color: #ffffff7d;
+    border-top: 1px solid #eeeeee29;
+    font-size: 16px;
+    font-weight: 400;
+}
+.getStartedModal .form-group{
+    margin-right: 10px;
 }

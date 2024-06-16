@@ -1,44 +1,13 @@
 
-<!doctype html>
-<html lang="en">
+@extends('layouts.user')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>landing page</title>
-    <!-- css link -->
-    <link rel="stylesheet" href="{{asset("css/userCss/style.css")}}">
-    <!-- bootstrap link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+@section('title') Welcome Page @endsection
 
-<body>
-    <section class="landingPage">
-        <header>
-            <nav>
-                <ul class="sidebar">
-                    <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Search</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="{{route('user.login')}}">Login</a></li>
-                </ul>
-                <ul>
-                    <li>
-                      <img class="logo" src="https://st3.depositphotos.com/4177785/31922/v/380/depositphotos_319223486-stock-illustration-sugar-free-linear-icon-food.jpg, https://st3.depositphotos.com/4177785/31922/v/450/depositphotos_319223486-stock-illustration-sugar-free-linear-icon-food.jpg 2x" alt="Logo" width="40" height="40"/></li>
-                    <li class="hideOnMobile"><a href="#">Home</a></li>
-                    <li class="hideOnMobile"><a href="#">Search</a></li>
-                    <li class="hideOnMobile"><a href="#">About</a></li>
-                    <li class="hideOnMobile"><a href="{{route('user.login')}}">Login</a></li>
-                    <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="content text-center">
+@section('content')
+ 
+ <section class="landingPage">
+        
+        {{-- <div class="content text-center">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
@@ -52,14 +21,61 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Button trigger modal -->
-        <!-- <button type="button" class="btn btn-primary">
-    Launch static backdrop modal
-  </button> -->
-
+        </div> --}}
+        <section class="table-section w-100">
+          <div class="position-relative">
+              <h2 class="text-center tableUprHead mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h2>
+              <div class="text-end mb-4">
+                  <button class="getStartBtn " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                      Get started
+                  </button>
+              </div>
+           
+          </div>
+             
+              <div class="dataInfo table-responsive">
+                  <table class="w-100">
+                      <thead>
+                          <tr>
+                              <th class="tableHead">First</th>
+                              <th class="tableHead">Second</th>
+                              <th class="tableHead">third</th>
+                              <th class="tableHead">fourth</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td class="tableData">Apple</td>
+                              <td class="tableData">Red</td>
+                              <td class="tableData">These are red.</td>
+                              <td class="tableData">sa</td>
+                          </tr>
+                          <tr>
+                              <td class="tableData">Pear</td>
+                              <td class="tableData">Green</td>
+                              <td class="tableData">These are green.</td>
+                              <td class="tableData">asd</td>
+                          </tr>
+                        
+                          <tr>
+                              <td class="tableData">Mango</td>
+                              <td class="tableData">Orange</td>
+                              <td class="tableData">These are orange.</td>
+                              <td class="tableData">asd</td>
+                          </tr>
+                          <tr>
+                              <td class="tableData">Passion Fruit</td>
+                              <td class="tableData">Green</td>
+                              <td class="tableData">These are green.</td>
+                              <td class="tableData">asd</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </section>
 
     </section>
+
 
 
     <!-- Modal -->
@@ -101,31 +117,4 @@
             </div>
         </div>
     </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-        <script>
-            function showSidebar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'flex'
-}
-function hideSidebar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'none'
-}
-        </script>
-</body>
-
-</html>
-
-<script>
-  document.getElementById('add_more').addEventListener('click', function() {
-      var userDetailDiv = document.querySelector('.user_details');
-      var newUserDetailDiv = userDetailDiv.cloneNode(true);
-      newUserDetailDiv.querySelectorAll('input').forEach(input => input.value = '');
-      newUserDetailDiv.querySelectorAll('select').forEach(select => select.selectedIndex = 0);
-      document.getElementById('user_details_container').appendChild(newUserDetailDiv);
-  });
-</script>
+@endsection

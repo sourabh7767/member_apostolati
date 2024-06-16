@@ -35,7 +35,7 @@ Route::middleware('prevent-back-history')->group(function () {
     Route::get('signup', 'User\AuthController@signup')->name('user.signup');
     Route::get('user/login', 'User\AuthController@login')->name('user.login');
     Route::get('forgetPassword', 'User\AuthController@forgetPassword')->name('user.forgetPassword');
-    Route::get('landingPage', 'User\AuthController@landingPage')->name('landingPage');
+    
     Route::get('clubList', 'User\AuthController@clubList')->name('clubList');
 
     Route::middleware(['auth', 'CheckRoleAdmin'])->group(function () {
@@ -55,7 +55,8 @@ Route::middleware('prevent-back-history')->group(function () {
         Route::resource('clubs', 'Admin\ClubController');
     });
 
-    Route::middleware(['auth', 'CheckRoleUser'])->group(function () {
-
+    Route::middleware(['auth', 'CheckRoleUser'])->prefix('user')->group(function () {
+        Route::get('/', 'User\AuthController@landingPage')->name('landingPage');
+        Route::resource('club', 'Admin\ClubManagementController');
     });
 });

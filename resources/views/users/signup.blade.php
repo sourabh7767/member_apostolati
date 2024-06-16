@@ -45,23 +45,7 @@
 							<a href=""><button type="submit" class="btn">Register</button></a>
 						</div>
 						<div class="text-white mb-3">or register with</div>
-						<div class="row mb-3">
-							<div class="col-4">
-								<a href="" class="btn btn-block btn-social btn-facebook">
-									<i class="fa fa-facebook"></i>
-								</a>
-							</div>
-							<div class="col-4">
-								<a href="" class="btn btn-block btn-social btn-google">
-									<i class="fa fa-google"></i>
-								</a>
-							</div>
-							<div class="col-4">
-								<a href="" class="btn btn-block btn-social btn-twitter">
-									<i class="fa fa-twitter"></i>
-								</a>
-							</div>
-						</div>
+						
 						<div class="text-white">Already have an account?
 							<a href="{{route("user.login")}}" class="login-link">Login here</a>
 						</div>
