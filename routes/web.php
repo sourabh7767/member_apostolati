@@ -55,8 +55,8 @@ Route::middleware('prevent-back-history')->group(function () {
         Route::resource('clubs', 'Admin\ClubController');
     });
 
+    Route::get('/', 'User\AuthController@landingPage')->name('landingPage');
     Route::middleware(['auth', 'CheckRoleUser'])->prefix('user')->group(function () {
-        Route::get('/', 'User\AuthController@landingPage')->name('landingPage');
         Route::resource('club', 'Admin\ClubManagementController');
     });
 });

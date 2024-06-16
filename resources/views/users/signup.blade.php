@@ -10,8 +10,8 @@
 					<div class="heading mb-3">
 						<h4>Create an account</h4>
 					</div>
-					<form action="#" method="POST">
-						@csrf
+					<form action="{{route('user.login')}}">
+						{{-- @csrf --}}
 						<div class="form-input">
 							<span><i class="fa fa-user"></i></span>
 							<input type="text" name="first_name" placeholder="First Name">
