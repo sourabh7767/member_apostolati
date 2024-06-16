@@ -58,9 +58,16 @@ nav a{
     align-items: center;
     color: #fff;
 }
+.titleLogo{
+    color: #fff;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: bold;margin-top:10px;font-size:150%;
+}
 nav a:hover {
   text-decoration: underline;
   text-underline-offset: 16px;
+}
+.active a{
+    text-decoration: underline;
+    text-underline-offset: 16px;
 }
 nav li:first-child{
     margin-right: auto;
@@ -250,6 +257,9 @@ th, td{
     color: #FFF;
     font-size: 16px;
     font-weight: 700;
+    width: 100%;
+    min-width: 250px;
+    max-width: 250px;
 }
 .tableData{
     color: #ffffff7d;

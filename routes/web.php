@@ -32,9 +32,13 @@ Route::middleware('prevent-back-history')->group(function () {
     });
     
     Route::get('/forbidden', 'Auth\LoginController@forbidden')->name('forbidden');
-    Route::any('signup', 'User\AuthController@signup')->name('user.signup');
-    Route::get('user/login', 'User\AuthController@login')->name('user.login');
-    Route::get('forgetPassword', 'User\AuthController@forgetPassword')->name('user.forgetPassword');
+    Route::any('user/signup', 'User\AuthController@signup')->name('user.signup');
+    Route::any('user/login', 'User\AuthController@login')->name('user.login');
+    Route::get('user/forgetPassword', 'User\AuthController@forgetPassword')->name('user.forgetPassword');
+    Route::post('forget-password', 'User\AuthController@submitForgetPasswordForm')->name('forget.password.post');
+    Route::get('change/password/{token}', 'User\AuthController@showResetPasswordForm')->name('reset.password.get'); 
+    Route::post('reset-password', 'User\AuthController@submitResetPasswordForm')->name('reset.password.post');
+    Route::any('user/verifyOtp', 'User\AuthController@verifyOtp')->name('user.verifyOtp');
     
     Route::get('clubList', 'User\AuthController@clubList')->name('clubList');
 
@@ -55,8 +59,11 @@ Route::middleware('prevent-back-history')->group(function () {
         Route::resource('clubs', 'Admin\ClubController');
     });
 
-    Route::get('/', 'User\AuthController@landingPage')->name('landingPage');
-    Route::middleware(['auth', 'CheckRoleUser'])->prefix('user')->group(function () {
-        Route::resource('club', 'Admin\ClubManagementController');
+    Route::middleware(['auth', 'CheckRoleUser'])->group(function () {
+        Route::get('/', 'User\ClubManagementController@index')->name('landingPage');
+        Route::prefix('user')->group(function () {
+            Route::resource('club', 'User\ClubManagementController');
+            Route::get('/logout', 'User\AuthController@logout')->name('user.logout');
+        });
     });
 });

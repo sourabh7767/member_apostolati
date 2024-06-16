@@ -10,25 +10,25 @@
 					<div class="heading mb-3">
 						<h4>Create an account</h4>
 					</div>
-					<form action="{{route('user.login')}}">
-						{{-- @csrf --}}
+					<form action="{{route('user.signup')}}" method="POST">
+						@csrf
 						<div class="form-input">
 							<span><i class="fa fa-user"></i></span>
-							<input type="text" name="first_name" placeholder="First Name">
+							<input type="text" name="first_name" placeholder="First Name" value="{{old('first_name')}}">
 							@if($errors->has('first_name'))
 								<div class="error" style="color: #dc3545;">{{ $errors->first('first_name') }}</div>
 							@endif
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-user"></i></span>
-							<input type="text" name="last_name" placeholder="Last Name">
+							<input type="text" name="last_name" placeholder="Last Name" value="{{old('last_name')}}">
 							@if($errors->has('last_name'))
 								<div class="error" style="color: #dc3545;">{{ $errors->first('last_name') }}</div>
 							@endif
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-envelope"></i></span>
-							<input type="email" name="email" placeholder="Email Address">
+							<input type="email" name="email" placeholder="Email Address" value="{{old('email')}}">
 							@if($errors->has('email'))
 								<div class="error" style="color: #dc3545;">{{ $errors->first('email') }}</div>
 							@endif
@@ -42,15 +42,15 @@
 						</div>
 						<div class="form-input">
 							<span><i class="fa fa-lock"></i></span>
-							<select name="club_id" id="">
-								<option value="">India</option>
-								<option value="">Pakistan</option>
-								<option value="">USA</option>
-								<option value="">UAE</option>
-								<option value="">Canada</option>
+							<select name="country_id" id="">
+								<option value="1">India</option>
+								<option value="2">Pakistan</option>
+								<option value="3">USA</option>
+								<option value="4">UAE</option>
+								<option value="5">Canada</option>
 							</select>
-							@if($errors->has('club_id'))
-								<div class="error" style="color: #dc3545;">{{ $errors->first('club_id') }}</div>
+							@if($errors->has('country_id'))
+								<div class="error" style="color: #dc3545;">{{ $errors->first('country_id') }}</div>
 							@endif
 						</div>
 						<div class="row mb-3">
@@ -62,7 +62,7 @@
 							</div>
 						</div>
 						<div class="text-left mb-3">
-							<a href="{{route('user.login')}}"><button type="submit" class="btn">Register</button></a>
+							<a href=""><button type="submit" class="btn">Register</button></a>
 						</div>
 						
 						<div class="text-white">Already have an account?

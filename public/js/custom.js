@@ -12,7 +12,7 @@ var defaultDatatableSettings = {
   processing: true,
   serverSide: true,
   lengthMenu: [ 10, 25, 50, 75, 100 ],
-  pageLength: 25,
+  pageLength: 10,
   // searchDelay: 500,
   // stateSave: true,
   order: [],
