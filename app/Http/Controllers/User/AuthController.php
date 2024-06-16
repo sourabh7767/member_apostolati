@@ -58,7 +58,7 @@ class AuthController extends Controller
             'otp' => $otp 
         ];
         try{
-            Mail::to($user->email)->send(new SignupMail($details));
+            // Mail::to($user->email)->send(new SignupMail($details));
             session()->flash('success','Verification OTP sent To your Email');
             return redirect()->route('user.verifyOtp',['id' => $user->id])->with('success','Verification OTP sent To your Email');
         } catch (\Exception $e) {
@@ -119,7 +119,7 @@ class AuthController extends Controller
                     'otp' => $otp 
                 ];
                 try{
-                    Mail::to($userObj->email)->send(new SignupMail($details));
+                    // Mail::to($userObj->email)->send(new SignupMail($details));
                     session()->flash('success','Verification Pending OTP sent To your Email');
                     return redirect()->route('user.verifyOtp',['id' => $userObj->id])->with('success','Verification Pending OTP sent To your Email');
                 } catch (\Exception $e) {
