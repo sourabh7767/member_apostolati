@@ -53,14 +53,14 @@
 								<div class="error" style="color: #dc3545;">{{ $errors->first('country_id') }}</div>
 							@endif
 						</div>
-						<div class="row mb-3">
+						<!-- <div class="row mb-3">
 							<div class="col-12 d-flex">
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="cb1" required>
 									<label class="custom-control-label text-white" for="cb1">I agree all terms & conditions</label>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<div class="text-left mb-3">
 							<a href=""><button type="submit" class="btn">Register</button></a>
 						</div>
