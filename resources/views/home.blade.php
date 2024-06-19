@@ -26,10 +26,10 @@
                                       <i data-feather="user" class="avatar-icon"></i>
                                   </div>
                               </div>
-                              <div class="my-auto">
+                              <!-- <div class="my-auto">
                                   <h4 class="fw-bolder mb-0">{{$users}}</h4>
                                   <p class="card-text font-small-3 mb-0">Users</p>
-                              </div>
+                              </div> -->
                           </div>
                         </a>
                       </div>
