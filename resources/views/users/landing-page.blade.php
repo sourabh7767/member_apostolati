@@ -45,29 +45,28 @@
                       </thead>
                       <tbody>
                           <tr>
-                              <td class="tableData">Apple</td>
-                              <td class="tableData">Red</td>
+                              <td class="tableData">These are Apple</td>
+                              <td class="tableData">These are Red</td>
                               <td class="tableData">These are red.</td>
-                              <td class="tableData">sa</td>
+                              <td class="tableData">These are orange</td>
                           </tr>
                           <tr>
                               <td class="tableData">Pear</td>
                               <td class="tableData">Green</td>
                               <td class="tableData">These are green.</td>
-                              <td class="tableData">asd</td>
+                              <td class="tableData">orange</td>
                           </tr>
-                        
                           <tr>
                               <td class="tableData">Mango</td>
                               <td class="tableData">Orange</td>
                               <td class="tableData">These are orange.</td>
-                              <td class="tableData">asd</td>
+                              <td class="tableData">orange</td>
                           </tr>
                           <tr>
                               <td class="tableData">Passion Fruit</td>
                               <td class="tableData">Green</td>
                               <td class="tableData">These are green.</td>
-                              <td class="tableData">asd</td>
+                              <td class="tableData">orange</td>
                           </tr>
                       </tbody>
                   </table>
