@@ -49,11 +49,11 @@
                 <table id="clubTable" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    {{-- <th>S.No</th> --}}
-                    {{-- <th>Created By</th> --}}
-                    {{-- <th>Club name</th>--}}
-                    {{--<th>Status</th>--}}
-                    {{--<th data-orderable="false">Action</th> --}}
+                    <th>S.No</th>
+                    <th>Created By</th>
+                    <th>Club name</th>
+                    <th>Status</th>
+                    <th data-orderable="false">Action</th>
                   </tr>
                   </thead>
               

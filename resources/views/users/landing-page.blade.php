@@ -1,7 +1,7 @@
 
 @extends('layouts.user')
 
-@section('title') Welcome Page @endsection
+@section('title') Clubs @endsection
 <style>
 #clubDataTable_wrapper .row{
   padding: 15px !important;
@@ -104,7 +104,7 @@ $user = auth()->user();
                 </form>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn submitBtn" data-bs-dismiss="modal" id="close">Close</button>
-                    <button type="button" class="btn submitBtn" id="Understood">Understood</button>
+                    <button type="button" class="btn submitBtn" id="Understood">Submit</button>
                 </div>
             </div>
         </div>

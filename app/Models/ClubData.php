@@ -23,7 +23,7 @@ class ClubData extends Model
         return isset($list[$value]) ? $list[$value] : "";
     }
 
-    public function getAllData($request = null, $flag = false)
+    public function getAllData($request = null, $flag = false , $isAdmin = false)
     {
         if (isset($request['order'])) {
             $columnNumber = $request['order'][0]['column'];
@@ -41,15 +41,18 @@ class ClubData extends Model
         if (empty($column)) {
             $column = 'id';
         }
-        $query = self::where('created_by',auth()->user()->id)->orderBy($column, $order);
+        if($isAdmin){
+            $query = self::orderBy($column, $order);
+        }else{
+            $query = self::where('created_by',auth()->user()->id)->orderBy($column, $order);
+        }
         if (!empty($request)) {
 
             $search = $request['search']['value'];
-
+            $filterBy = $request['filterBy'];
             if (!empty($search)) {
                 $query->where(function ($query) use ($request, $search) {
-                    $query->orWhere('name', 'LIKE', '%' . $search . '%')
-                        ->orWhere('club_id', 'LIKE', '%' . $search . '%');
+                    $query->orWhere('name', 'LIKE', '%' . $search . '%');
                         $query->orWhereHas('user', function ($query) use ($search) {
                             $query->where(function ($query) use ($search) {
                                 $query->orWhere('full_name', 'LIKE', '%' . $search . '%');
@@ -62,6 +65,15 @@ class ClubData extends Model
                         });
                 });
 
+                if ($flag)
+                    return $query->count();
+            }
+            if(!empty($filterBy)){
+                $query->whereHas('user', function ($query) use ($filterBy) {
+                    $query->where(function ($query) use ($filterBy) {
+                        $query->Where('status', $filterBy);
+                    });
+                });
                 if ($flag)
                     return $query->count();
             }

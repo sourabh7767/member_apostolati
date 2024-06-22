@@ -10,13 +10,13 @@
         <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
         
             <h2 class="card-title fw-bold mb-1">Welcome to {{config('app.name')}}</h2>
-            <p class="card-text mb-2">Please sign-in to your account and start the adventure</p>
+            <p class="card-text mb-2">Please sign-in to your account.</p>
             <form class="auth-login-form mt-2" method="post" action="{{ url('/admin/login') }}">
                 @csrf
                 <div class="mb-1">
                     <label class="form-label" for="login-email">Email</label>
                     <!-- <input class="form-control" id="login-email" type="text" name="login-email" placeholder="john@example.com" aria-describedby="login-email" autofocus="" tabindex="1" /> -->
-                    <input type="text" name="email" value="{{ old('email') }}" id="login-email" placeholder="Enter your email or employee Id" class="form-control @error('email') is-invalid error @enderror">
+                    <input type="text" name="email" value="{{ old('email') }}" id="login-email" placeholder="Enter your email" class="form-control @error('email') is-invalid error @enderror">
                     @error('email')
                         <span class="error invalid-feedback">{{ $message }}</span>
                     @enderror

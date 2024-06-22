@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title')Users @endsection
+@section('title')Club Data @endsection
 
 @section('content')
  
@@ -16,9 +16,9 @@
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="{{route('admin.home')}}">Home</a>
                                     </li>
-                                    <li class="breadcrumb-item"><a href="{{route('users.index')}}">Users</a>
+                                    <li class="breadcrumb-item"><a href="{{route('clubs.index')}}">Clubs</a>
                                     </li>
-                                    <li class="breadcrumb-item active">Users List
+                                    <li class="breadcrumb-item active">Clubs Name List
                                     </li>
                                 </ol>
                             </div>
@@ -32,13 +32,17 @@
             <div class="card data-table">
                <div class="card-header">
                   <div class="heading-text">
-                    <h4 class="m-0"><i class="fas fa-users mr-2"></i>&nbsp;{{ __('Users') }}</h4>
+                    <h4 class="m-0"><i class="fas fa-users mr-2"></i>&nbsp;{{ __('Clubs Name List') }}</h4>
                   </div>
 
                   <div class="right-side mr-2">
 
 
-
+                <select class="form-control dt-button" name="filterBy" id="filterBy" style="width: 167px;">
+                    <option value="">All</option>
+                    <option value="1">Active</option>
+                    <option value="0">Inactive</option>
+                </select>
                 {{-- <a href="{{ route('users.create') }}" class="dt-button btn btn-primary"><i class="fas fa-plus"></i>&nbsp;&nbsp;Create New User</a> --}}
 
               </div>
@@ -46,16 +50,16 @@
             
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="usersTable" class="table table-bordered table-hover">
+                <table id="clubsNameList" class="table table-bordered table-hover">
                   <thead>
-                  <tr>
-                    <th>S.No</th>
-                    <th>Full Name</th>
-                    <th>Email</th>
-                     <th>Status</th>
-                    <th>Created At</th>
-                    <th data-orderable="false">Action</th>
-                  </tr>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Created By</th>
+                        <th>Club</th>
+                        <th>Name</th>
+                        <th>Created At</th>
+                        <th data-orderable="false">Action</th>
+                      </tr>
                   </thead>
               
                 </table>
@@ -74,7 +78,7 @@
 
       @include('include.dataTableScripts')   
 
-      <script src="{{ asset('js/pages/users/index.js') }}"></script>
+      <script src="{{ asset('js/pages/clubs/index.js') }}"></script>
 
   @endpush
 

@@ -57,6 +57,9 @@ Route::middleware('prevent-back-history')->group(function () {
         Route::resource('page', 'Admin\PageController');
         Route::post('upload', 'Admin\PageController@upload')->name('upload');
         Route::resource('clubs', 'Admin\ClubController');
+        Route::get('admin/club/list/name','Admin\ClubController@getClubData')->name('admin.clubNameList');
+        Route::DELETE('/admin/club/list/name/delete/{id}','Admin\ClubController@deleteClubData')->name('admin.deleteClubData.delete');
+        
     });
 
     Route::middleware(['auth', 'CheckRoleUser'])->group(function () {

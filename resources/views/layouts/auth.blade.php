@@ -54,11 +54,7 @@
 
         <!-- BEGIN: Content-->
         <div class="app-content content ">
-            <div class="content-overlay"></div>
-            <div class="header-navbar-shadow"></div>
             <div class="content-wrapper">
-                <div class="content-header row">
-                </div>
                 <div class="content-body">
                     <div class="auth-wrapper auth-cover">
                         <div class="auth-inner row m-0">
@@ -92,8 +88,8 @@
                             </a>
                             <!-- /Brand logo-->
                             <!-- Left Text-->
-                            <div class="d-none d-lg-flex col-lg-7 align-items-center p-5">
-                                <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="{{ asset('images/theme/pages/login-v2.svg') }}" alt="Login V2" /></div>
+                            <div class="d-lg-flex col-lg-7 align-items-center p-0">
+                                <div class="w-100 d-lg-flex align-items-center justify-content-center"><img class="yashuHuni" src="{{ asset('images/joseph1.jpg') }}" alt="Login V2" /></div>
                             </div>
                             <!-- /Left Text-->
                                 @yield('content')

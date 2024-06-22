@@ -24,17 +24,17 @@
                 <a class="d-flex align-items-center" href="{{ route('admin.home') }}"><i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Dashboard</span></a>
             </li>
 
-                {{-- <li class=" nav-item {{request()->is('users') || request()->is('users/*')?'active':''}}">
+                <li class=" nav-item {{request()->is('users') || request()->is('users/*')?'active':''}}">
                     <a class="d-flex align-items-center" href="{{route('users.index')}}"><i data-feather="user"></i><span class="menu-title text-truncate" data-i18n="Users">Users</span></a>
                 </li>
 
                 <li class=" nav-item {{request()->is('clubs') || request()->is('clubs/*')?'active':''}}">
                     <a class="d-flex align-items-center" href="{{route('clubs.index')}}"><i data-feather="briefcase"></i><span class="menu-title text-truncate" data-i18n="Users">Clubs</span></a>
-                </li> --}}
+                </li>
 
-              <!--   <li class=" nav-item {{request()->is('role') || request()->is('role/*')?'active':''}}">
-                    <a class="d-flex align-items-center" href="{{route('role.index')}}"><i data-feather="grid"></i><span class="menu-title text-truncate" data-i18n="Kanban">Roles</span></a>
-                </li> -->
+              <li class=" nav-item {{request()->is('admin/club/list/name') || request()->is('admin/club/list/name/*')?'active':''}}">
+                    <a class="d-flex align-items-center" href="{{route('admin.clubNameList')}}"><i data-feather="grid"></i><span class="menu-title text-truncate" data-i18n="Kanban">Club Name List</span></a>
+                </li> 
 
                 {{-- <li class=" nav-item {{request()->is('page') || request()->is('page/*')?'active':''}}">
                     <a class="d-flex align-items-center" href="{{route('page.index')}}"><i data-feather="file"></i><span class="menu-title text-truncate" data-i18n="Page">Pages</span></a>

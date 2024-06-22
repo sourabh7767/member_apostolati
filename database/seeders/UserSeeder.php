@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use DB;
 use Hash;
 use App\Models\User;
+use Carbon\Carbon;
 
 class UserSeeder extends Seeder
 {
@@ -24,6 +25,30 @@ class UserSeeder extends Seeder
                 'email' => 'admin@yopmail.com',
                 'phone_number' => '123456789',
                 'role' => User::ROLE_ADMIN,
+                'password' => Hash::make('admin@123')
+            ]);
+            DB::table('users')->insert([
+                'full_name' => 'laksh',
+                'email' => 'laksh@yopmail.com',
+                'phone_number' => '123456787',
+                'role' => User::ROLE_USER,
+                'email_verified_at' => Carbon::now(),
+                'password' => Hash::make('admin@123')
+            ]);
+            DB::table('users')->insert([
+                'full_name' => 'preet',
+                'email' => 'preet@yopmail.com',
+                'phone_number' => '123456779',
+                'role' => User::ROLE_USER,
+                'email_verified_at' => Carbon::now(),
+                'password' => Hash::make('admin@123')
+            ]);
+            DB::table('users')->insert([
+                'full_name' => 'sammy',
+                'email' => 'sammy@yopmail.com',
+                'phone_number' => '123459789',
+                'role' => User::ROLE_USER,
+                'email_verified_at' => Carbon::now(),
                 'password' => Hash::make('admin@123')
             ]);
         }

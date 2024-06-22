@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Club;
+use App\Models\ClubData;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Role;
@@ -40,12 +41,12 @@ class ClubController extends Controller
                     return '<span class="badge badge-light-' . $club->getStatusBadge() . '">' . $club->getStatus() . '</span>';
                 })
                 ->addColumn('created_by', function ($club) {
-                    return !empty($club->user) ? $club->user->full_name : $club->user_id;
+                    return "Admin";//!empty($club->user) ? $club->user->full_name : $club->user_id;
                 })
 
                 ->addColumn('action', function ($club) {
                     $btn = '';
-                    $btn = '<a href="' . route('clubs.edit', encrypt($club->id)) . '" title="Edit"><i class="fas fa-edit"></i></a>&nbsp;&nbsp;';
+                    // $btn = '<a href="' . route('clubs.edit', encrypt($club->id)) . '" title="Edit"><i class="fas fa-edit"></i></a>&nbsp;&nbsp;';
                     $btn .= '<a href="javascript:void(0);" delete_form="delete_customer_form"  data-id="' . encrypt($club->id) . '" class="delete-datatable-record text-danger delete-users-record" title="Delete"><i class="fas fa-trash"></i></a>';
                     return $btn;
                 })
@@ -183,5 +184,62 @@ class ClubController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+     public function getClubData(Request $request,ClubData $clubRecord)
+     {
+        if ($request->ajax()) {
+            $clubRecords = $clubRecord->getAllData($request,false,true);
+            $totalRecords = ClubData::count();
+            $search = $request['search']['value'];
+            $setFilteredRecords = $totalRecords;
+            $filterBy = @$request['filterBy'];
+            if (!empty($search) || !empty($filterBy)) {
+                $setFilteredRecords = $clubRecord->getAllData($request, true,true);
+                if (empty($setFilteredRecords))
+                    $totalRecords = 0;
+            }
+
+            return datatables()
+                ->of($clubRecords)
+                ->addIndexColumn()
+              
+                ->addColumn('created_by', function ($clubRecord) {
+                    return !empty($clubRecord->user) ? $clubRecord->user->full_name: "";
+                })
+                ->addColumn('club_id', function ($clubRecord) {
+                    return !empty($clubRecord->club) ? $clubRecord->club->club_name : "";
+                })
+                ->addColumn('created_at', function ($clubRecord) {
+                    return  !empty($clubRecord->created_at) ? $clubRecord->created_at->diffForHumans() : "";
+                })
+                ->addColumn('action', function ($club) {
+                    $btn = '';
+                    // $btn = '<a href="' . route('clubs.edit', encrypt($club->id)) . '" title="Edit"><i class="fas fa-edit"></i></a>&nbsp;&nbsp;';
+                    $btn .= '<a href="javascript:void(0);" delete_form="delete_customer_form"  data-id="' . encrypt($club->id) . '" class="delete-datatable-record text-danger delete-users-record" title="Delete"><i class="fas fa-trash"></i></a>';
+                    return $btn;
+                })
+                ->rawColumns([
+                    'action',
+                ])
+               
+                ->setTotalRecords($totalRecords)
+                ->setFilteredRecords($setFilteredRecords)
+                ->skipPaging()
+                ->make(true);
+        }
+        return view('admin.club-names.club-name-list');
+     }
+
+     public function deleteClubData($id){
+        $clubRecord = ClubData::find(decrypt($id));
+        if(!empty($clubRecord)){
+            $clubRecord->delete();
+            session()->flash('success',"Data Deleted Successfully!");
+            return response()->json(["statusCode" => 200,"message" => "Data Deleted Successfully!"]);
+        }else{
+            session()->flash('error',"Data Not Deleted!");
+            return response()->json(["statusCode" => 401,"message" => "Data Not Deleted!"]);
+        }
+     }
 
 }

@@ -35,10 +35,11 @@ class ClubManagementController extends Controller
               
                 ->addColumn('created_by', function ($clubRecord) {
                     return !empty($clubRecord->user) ? $clubRecord->user->full_name: "";
-                })->addColumn('club_id', function ($clubRecord) {
+                })
+                ->addColumn('club_id', function ($clubRecord) {
                     return !empty($clubRecord->club) ? $clubRecord->club->club_name : "";
                 })
-                ->addColumn('craeted_at', function ($clubRecord) {
+                ->addColumn('created_at', function ($clubRecord) {
                     return  !empty($clubRecord->created_at) ? $clubRecord->created_at->diffForHumans() : "";
                 })
                

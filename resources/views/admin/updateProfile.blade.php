@@ -88,14 +88,14 @@
 
                                                
                                             </div>
-                                            <div class="col-md-6 col-12">
+                                            {{-- <div class="col-md-6 col-12">
                                                   <div class="mb-1">
                                                     <label class="form-label" for="file">Profile Image </span></label><br>
                                                     <input type="file" name="file" class="form-control">
 
                                                   </div>
                                                
-                                            </div>
+                                            </div> --}}
                                         
                                             <div class="col-12">
                                                 <button type="Submit" class="btn btn-primary me-1">Update</button>

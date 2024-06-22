@@ -12,10 +12,10 @@ $(document).ready(function() {
         // pageLength: 10,
         columns: [
             {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
-            { data: 'created_by', name: 'created_by' },
-            { data: 'club_id', name: 'club_id' },
-            { data: 'name', name: 'name' },
-            { data: 'created_at', name: 'created_at' },
+            { data: 'created_by', name: 'created_by' , orderable: false, searchable: false},
+            { data: 'club_id', name: 'club_id' , orderable: false, searchable: false},
+            { data: 'name', name: 'name' , orderable: false, searchable: false},
+            { data: 'created_at', name: 'created_at' , orderable: false, searchable: false},
         ],
         ...defaultDatatableSettings,
         // createdRow: function ( row, data, index ) {
@@ -32,6 +32,8 @@ $('#clubDataTable').on('draw.dt', function() {
         $(this).addClass('tableData');
     });
 }); 
+
+
 $("#upload_file").change(function(event){
     $("#pageloader").addClass("pageloader");
     $("#import_users").submit();

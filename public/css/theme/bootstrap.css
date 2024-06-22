@@ -485,10 +485,17 @@ progress {
 .blockquote {
   margin-bottom: 0;
   font-size: 1.25rem; }
-
+.yashuHuni{
+  width: 100%;
+  height: 100vh;
+}
 .blockquote > :last-child {
   margin-bottom: 0; }
-
+.auth-wrapper.auth-cover .auth-inner {
+  height: 100vh !important;
+  overflow-y: auto;
+  /* height: calc(var(--vh, 1vh) * 100); */
+}
 .blockquote-footer {
   margin-top: 0;
   margin-bottom: 0;
@@ -8997,3 +9004,15 @@ fieldset:disabled .btn {
     display: inline-flex !important; }
   .d-print-none {
     display: none !important; } }
+  
+
+    .auth-wrapper.auth-cover .brand-logo {
+      position: absolute;
+      top: 2rem;
+      /* left: 2rem; */
+      left: unset !important;
+      right: 9%;
+      margin: 0;
+      z-index: 1;
+      justify-content: end !important;
+  }
