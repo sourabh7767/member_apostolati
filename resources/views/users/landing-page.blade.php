@@ -16,7 +16,7 @@ $user = auth()->user();
         @if ($totalRecords > 0 )
         <section class="table-section w-100">
           <div class="position-relative">
-              <h2 class="text-center tableUprHead mb-2">Club Data. </h2>
+              <h2 class="text-center tableUprHead mb-2">Home </h2>
               <div class="text-end mb-4">
                   <button class="getStartBtn " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                       Get started
@@ -72,7 +72,7 @@ $user = auth()->user();
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header d-block position-relative">
-                    <h1 class="modal-title  text-center" id="staticBackdropLabel">Modal title</h1>
+                    <h1 class="modal-title  text-center" id="staticBackdropLabel">Add Data</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close"></button>
                 </div>
                 <form action="" id="ClubDataForm">
