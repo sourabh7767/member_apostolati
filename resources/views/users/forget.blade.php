@@ -14,9 +14,9 @@
 		<div class="row">
 			<div class="col-lg-6 col-md-6 form-container">
 				<div class="col-lg-8 col-md-12 col-sm-9 col-xs-12 form-box">
-					<div class="logo mt-5 mb-3 text-center">
+					{{-- <div class="logo mt-5 mb-3 text-center">
 						<img src="{{asset("images/logo.png")}}" width="150px">
-					</div>
+					</div> --}}
 					<div class="reset-form d-block">
 						<form class="reset-password-form" action="{{route('user.login')}}">
 							<h4 class="mb-3">Reset Your Password</h4>
