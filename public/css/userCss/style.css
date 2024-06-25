@@ -330,3 +330,7 @@ th, td{
 .dropdown-menu li{
     margin-bottom: 7px;
 }
+
+.titleLogo{
+    color: #fff;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: bold;margin-top:10px;font-size:150%;
+}

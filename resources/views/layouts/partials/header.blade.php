@@ -9,7 +9,7 @@
         </ul> --}}
         <ul>
             <li>
-              {{env("APP_NAME")}}</li>
+                <div class="titleLogo" >{{env("APP_NAME")}}</div></li>
             {{-- <li class="hideOnMobile"><a href="#">Home</a></li> --}}
             {{-- <li class="hideOnMobile"><a href="#">Search</a></li> --}}
             {{-- <li class="hideOnMobile"><a href="#">About</a></li> --}}
