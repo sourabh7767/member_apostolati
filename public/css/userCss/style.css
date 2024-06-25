@@ -293,13 +293,15 @@ th, td{
     text-decoration: none !important;
     position: relative;
     z-index: 99;
+    margin-bottom: 5px !important;
     background-color: transparent;
-    border-bottom: 1px solid #6e6c6c6e;
+    /* border-bottom: 1px solid #6e6c6c6e; */
     padding: 10px;
     border-radius: 12px;
 }
 .profileDropdown .dropdown-menu .dropdown-item:hover {
     color: #fff;
+    box-shadow: 5px 3px 3px 4px #71367538;
     background-color: #8d238a99;
 }
 .lockIcon{
@@ -307,4 +309,24 @@ th, td{
     top: 40px;
     left: 10px;
     color: #938d8d;
+}
+.profileDropdown .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border: none !important;
+}
+#changePassword .inputBox {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border-radius: 12px;
+    border: 1px solid #c8bbbb;
+    outline: #7c21a7 !important;
+    font-size: 14px;
+    font-weight: 400;
+    color: #564f4f;
+}
+.dropdown-menu li{
+    margin-bottom: 7px;
 }
