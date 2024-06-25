@@ -1,3 +1,4 @@
+
 <header>
     <nav>
         {{-- <ul class="sidebar">
@@ -20,10 +21,9 @@
                         <i class="fa-solid fa-bars fa-xl"></i>
                     </button>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#profileModal">Update Profile</a></li>
-                      <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#changePassword">Change Password</a></li>
-                      <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a></li>
-                      <li><a class="dropdown-item" href="{{route('user.login')}}">Login</a></li>
+                      <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#profileModal"><i class="fa-solid fa-user me-2"></i>Update Profile</a></li>
+                      <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#changePassword"><i class="fa-solid fa-key me-2"></i>Change Password</a></li>
+                      <li><a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
                     </ul>
             </li>
         </ul>
@@ -83,32 +83,35 @@ tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           </div>
           <div class="modal-body">
             
-                  <div class="row">
-                      <div class="col-lg-12">
-                          <div class="form-group position-relative mb-3">
-                              <label class="labelTxt" for="">Old Passwowd</label>
-                              <input class="inputBox" type="text">
-                              <i class="fa-solid fa-lock lockIcon"></i>
-                          </div>
-                      </div>
-                      <div class="col-lg-12">
-                          <div class="form-group position-relative mb-3">
-                              <label class="labelTxt" for="">New Password</label>
-                              <input class="inputBox" type="text">
-                              <i class="fa-solid fa-lock lockIcon"></i>
-                          </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="form-group position-relative mb-3">
-                            <label class="labelTxt" for="">Confirm Password</label>
-                            <input class="inputBox" type="text">
-                            <i class="fa-solid fa-lock lockIcon"></i>
-                        </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group position-relative mb-3">
+                        <label class="labelTxt" for="oldPassword">Old Password</label>
+                        <input id="oldPassword" class="inputBox masked" type="password">
+                        <i class="fa-solid fa-lock lockIcon"></i>
+                        <i class="fa-solid fa-eye-slash eyeIcon toggle-password" data-target="#oldPassword"></i>
                     </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group position-relative mb-3">
+                        <label class="labelTxt" for="newPassword">New Password</label>
+                        <input id="newPassword" class="inputBox masked" type="password">
+                        <i class="fa-solid fa-lock lockIcon"></i>
+                        <i class="fa-solid fa-eye-slash eyeIcon toggle-password" data-target="#newPassword"></i>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group position-relative mb-3">
+                        <label class="labelTxt" for="confirmPassword">Confirm Password</label>
+                        <input id="confirmPassword" class="inputBox masked" type="password">
+                        <i class="fa-solid fa-lock lockIcon"></i>
+                        <i class="fa-solid fa-eye-slash eyeIcon toggle-password" data-target="#confirmPassword"></i>
+                    </div>
+                </div>
+            </div>
                  
                   
                   <!-- <button class="addMorBtn mt-3"><i class="fa-solid fa-plus addMoreIcon"></i> Add More</button> -->
-              </div>
           </div>
           <div class="modal-footer justify-content-center">
               <!-- <button type="button" class="btn submitBtn" data-bs-dismiss="modal">Close</button> -->
@@ -135,3 +138,20 @@ tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         </div>
     </div>
   </div>
+@push('page_script')
+<script>
+    $(document).ready(function() {
+        $('.toggle-password').click(function() {
+            var input = $($(this).data('target'));
+            if (input.attr('type') === 'password') {
+                input.attr('type', 'text');
+                $(this).removeClass('fa-eye-slash').addClass('fa-eye');
+            } else {
+                input.attr('type', 'password');
+                $(this).removeClass('fa-eye').addClass('fa-eye-slash');
+            }
+        });
+    });
+</script>
+@endpush
+  
