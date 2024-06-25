@@ -23,7 +23,7 @@
             </div>
         </div> --}}
         <section class="table-section w-100">
-          <div class="position-relative">
+          {{-- <div class="position-relative"> --}}
               <h2 class="text-center tableUprHead mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h2>
               <div class="text-end mb-4">
                   <button class="getStartBtn " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -31,7 +31,7 @@
                   </button>
               </div>
            
-          </div>
+          {{-- </div> --}}
              
               <div class="dataInfo table-responsive">
                   <table class="w-100">
