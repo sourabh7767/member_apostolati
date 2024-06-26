@@ -35,7 +35,8 @@ class UserController extends Controller
                     return '<span class="badge badge-light-' . $user->getStatusBadge() . '">' . $user->getStatus() . '</span>';
                 })
                 ->addColumn('created_at', function ($user) {
-                    return $user->created_at;
+                    return !empty($user->created_at) ? $user->created_at :  'N/A';
+
                 })
                 ->addColumn('email', function ($user) {
                     return $user->email ? $user->email : 'N/A';

@@ -24,11 +24,11 @@
                 <a class="d-flex align-items-center" href="{{ route('admin.home') }}"><i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Dashboard</span></a>
             </li>
 
-                {{-- <li class=" nav-item {{request()->is('users') || request()->is('users/*')?'active':''}}">
+                <li class=" nav-item {{request()->is('users') || request()->is('users/*')?'active':''}}">
                     <a class="d-flex align-items-center" href="{{route('users.index')}}"><i data-feather="user"></i><span class="menu-title text-truncate" data-i18n="Users">Users</span></a>
                 </li>
 
-                <li class=" nav-item {{request()->is('clubs') || request()->is('clubs/*')?'active':''}}">
+                {{-- <li class=" nav-item {{request()->is('clubs') || request()->is('clubs/*')?'active':''}}">
                     <a class="d-flex align-items-center" href="{{route('clubs.index')}}"><i data-feather="briefcase"></i><span class="menu-title text-truncate" data-i18n="Users">Clubs</span></a>
                 </li> --}}
 
