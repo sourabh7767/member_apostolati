@@ -11,7 +11,7 @@
         <title> @yield('title') </title>
         <meta name="csrf-token" content="{{ csrf_token() }}" />
         <link rel="apple-touch-icon" href="{{ asset('images/theme/ico/apple-icon-120.png') }}">
-        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}">
+        {{-- <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}"> --}}
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
 
         <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
@@ -61,7 +61,7 @@
 
                             <!-- Brand logo-->
                             <a class="brand-logo" href="{{route('login')}}">
-                                <svg viewBox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="28">
+                                {{-- <svg viewBox="0 0 139 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="28">
                                     <defs>
                                         <lineargradient id="linearGradient-1" x1="100%" y1="10.5120544%" x2="50%" y2="89.4879456%">
                                             <stop stop-color="#000000" offset="0%"></stop>
@@ -83,7 +83,7 @@
                                             </g>
                                         </g>
                                     </g>
-                                </svg>
+                                </svg> --}}
                                 <h2 class="brand-text text-primary ms-1">{{config('app.name')}}</h2>
                             </a>
                             <!-- /Brand logo-->

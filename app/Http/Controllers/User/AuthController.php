@@ -112,6 +112,14 @@ class AuthController extends Controller
                 return Redirect::back()->withInput()->withErrors($validator);
             }
             $userObj = User::where("email",$request->email)->first();
+            
+            if (!Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+    
+                return back()->withErrors([
+                    'email' => 'The provided credentials do not match our records.',
+                ])->withInput($request->only('email'));
+    
+            }
             if($userObj->email_verified_at == null){
                 $otp = 1111;//$userObj->generateEmailVerificationOtp();
                 $details = [
@@ -126,13 +134,6 @@ class AuthController extends Controller
                     session()->flash('error', $e->getMessage());
                     return redirect()->back()->with('error',$e->getMessage());
                 }
-            }
-            if (!Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-    
-                return back()->withErrors([
-                    'email' => 'The provided credentials do not match our records.',
-                ])->withInput($request->only('email'));
-    
             }
             session()->flash('success','Logged In');
             return redirect()->route('landingPage')->with('success','Logged In');

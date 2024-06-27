@@ -13,8 +13,8 @@
               <div class="card-header">
                   <h4 class="card-title">Statistics</h4>
                   <div class="d-flex align-items-center">
-<!--                       <p class="card-text font-small-2 me-25 mb-0">Updated 1 month ago</p>
- -->                  </div>
+                      {{-- <p class="card-text font-small-2 me-25 mb-0">Updated 1 month ago</p> --}}
+                 </div>
               </div>
               <div class="card-body statistics-body">
                   <div class="row">
@@ -26,10 +26,10 @@
                                       <i data-feather="user" class="avatar-icon"></i>
                                   </div>
                               </div>
-                              <!-- <div class="my-auto">
+                              <div class="my-auto">
                                   <h4 class="fw-bolder mb-0">{{$users}}</h4>
                                   <p class="card-text font-small-3 mb-0">Users</p>
-                              </div> -->
+                              </div> 
                           </div>
                         </a>
                       </div>

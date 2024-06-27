@@ -10,7 +10,7 @@
     <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
             <li class="nav-item me-auto"><a class="navbar-brand" href="{{route('admin.home')}}"><span class="brand-logo">
-                <img src="{{asset('images/logo.png')}}">
+                <!-- <img src="{{asset('images/logo.png')}}"> -->
                        </span>
                     <h2 class="brand-text">{{config('app.name')}}</h2>
                 </a></li>
@@ -28,7 +28,7 @@
                     <a class="d-flex align-items-center" href="{{route('users.index')}}"><i data-feather="user"></i><span class="menu-title text-truncate" data-i18n="Users">Users</span></a>
                 </li>
 
-                <li class=" nav-item {{request()->is('clubs') || request()->is('clubs/*')?'active':''}}">
+                {{-- <li class=" nav-item {{request()->is('clubs') || request()->is('clubs/*')?'active':''}}">
                     <a class="d-flex align-items-center" href="{{route('clubs.index')}}"><i data-feather="briefcase"></i><span class="menu-title text-truncate" data-i18n="Users">Clubs</span></a>
                 </li>
 

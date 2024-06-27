@@ -32,7 +32,6 @@ class ClubManagementController extends Controller
             return datatables()
                 ->of($clubRecords)
                 ->addIndexColumn()
-              
                 ->addColumn('created_by', function ($clubRecord) {
                     return !empty($clubRecord->user) ? $clubRecord->user->full_name: "";
                 })

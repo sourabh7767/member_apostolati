@@ -4,9 +4,9 @@
 
 @section('content')
 				<div class="col-lg-8 col-md-12 col-sm-9 col-xs-12 form-box text-center">
-					<div class="logo mt-5 mb-3">
+					{{-- <div class="logo mt-5 mb-3">
 						<img src="{{asset("images/logo.png")}}" width="150px">
-					</div>
+					</div> --}}
 					<div class="heading mb-3">
 						<h4>Create an account</h4>
 					</div>
@@ -40,7 +40,7 @@
 								<div class="error" style="color: #dc3545;">{{ $errors->first('password') }}</div>
 							@endif
 						</div>
-						<div class="form-input">
+						{{-- <div class="form-input">
 							<span><i class="fa fa-lock"></i></span>
 							<select name="country_id" id="">
 								<option value="1">India</option>
@@ -52,8 +52,8 @@
 							@if($errors->has('country_id'))
 								<div class="error" style="color: #dc3545;">{{ $errors->first('country_id') }}</div>
 							@endif
-						</div>
-						<!-- <div class="row mb-3">
+						</div> --}}
+						<div class="row mb-3">
 							<div class="col-12 d-flex">
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" class="custom-control-input" id="cb1" required>

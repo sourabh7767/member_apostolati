@@ -11,7 +11,12 @@ $(document).ready(function() {
         ajax: site_url + "/user/club/",
         // pageLength: 10,
         columns: [
-            {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false},
+            {
+                data: null,
+                render: function (data, type, row, meta) {
+                    return '#' + (meta.row + 1);
+                }
+            },
             { data: 'created_by', name: 'created_by' , orderable: false, searchable: false},
             { data: 'club_id', name: 'club_id' , orderable: false, searchable: false},
             { data: 'name', name: 'name' , orderable: false, searchable: false},

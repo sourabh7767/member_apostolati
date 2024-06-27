@@ -63,7 +63,7 @@
                                                 </div>
                                                
                                             </div>
-                                            <div class="col-md-6 col-12">
+                                            {{-- <div class="col-md-6 col-12">
 
                                                <div class="mb-1">
                                                     <label class="form-label" for="phone_number">Phone Number <span class="text-danger asteric-sign">&#42;</span></label><br>
@@ -87,7 +87,7 @@
                                                 </div>
 
                                                
-                                            </div>
+                                            </div> --}}
                                             {{-- <div class="col-md-6 col-12">
                                                   <div class="mb-1">
                                                     <label class="form-label" for="file">Profile Image </span></label><br>

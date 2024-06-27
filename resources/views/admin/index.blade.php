@@ -49,12 +49,12 @@
                 <table id="usersTable" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>S.No</th>
-                    <th>Full Name</th>
-                    <th>Email</th>
-                     <th>Status</th>
-                    <th>Created At</th>
-                    <th data-orderable="false">Action</th>
+                    <th data-orderable="false">S.No</th>
+                    <th data-orderable="false">Full Name</th>
+                    <th data-orderable="false">Email</th>
+                     <th data-orderable="false">Status</th>
+                    <th data-orderable="false">Created At</th>
+                    {{-- <th data-orderable="false">Action</th> --}}
                   </tr>
                   </thead>
               

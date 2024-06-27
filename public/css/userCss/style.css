@@ -48,7 +48,7 @@ nav ul{
     margin-bottom: 0;
 }
 nav li{
-    height: 50px;
+    /* height: 50px; */
 }
 nav a{
     height: 100%;
@@ -269,4 +269,89 @@ th, td{
 }
 .getStartedModal .form-group{
     margin-right: 10px;
+}
+
+/* profile css */
+
+.profileDropdown{
+    background-color: transparent;
+    padding: 0 30px;
+}
+.profileDropdown .button{
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+.profileDropdown .dropdown-menu.show{
+    position: absolute;
+    inset: 0px 0px auto auto;
+    margin: 0px;
+    transform: translate3d(-16px, 50px, -3px);
+    width: 100%;
+    min-width: 200px;
+    /* background: transparent; */
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0;
+    z-index: 111;
+    padding:  5px ;
+}
+.profileDropdown .dropdown-menu .dropdown-item {
+    color: #6d6a6a;
+    text-decoration: none !important;
+    height: unset !important;
+    position: relative;
+    z-index: 99;
+    margin-bottom: 5px !important;
+    background-color: transparent;
+    /* border-bottom: 1px solid #6e6c6c6e; */
+    padding: 4px 10px !important;
+    border-radius: 10px;
+}
+/* .dropdown-menu.show {
+    display: block;
+} */
+.profileDropdown .dropdown-menu .dropdown-item:hover {
+    color: #fff;
+    box-shadow: 5px 3px 3px 4px #71367538;
+    background-color: #8d238a99;
+}
+.lockIcon{
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    color: #938d8d;
+}
+.profileDropdown .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border: none !important;
+}
+#changePassword .inputBox {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    border-radius: 12px;
+    border: 1px solid #c8bbbb;
+    outline: #7c21a7 !important;
+    font-size: 14px;
+    font-weight: 400;
+    color: #564f4f;
+}
+.dropdown-menu li{
+    margin-bottom: 7px;
+}
+
+.titleLogo{
+    color: #fff;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: bold;margin-top:10px;font-size:150%;
+}
+.eyeIcon{
+    position: absolute;
+    right: 13px;
+    top: 42px;
+    cursor: pointer;
 }

@@ -15,24 +15,20 @@ $user = auth()->user();
  <section class="landingPage">
         @if ($totalRecords > 0 )
         <section class="table-section w-100">
-          <div class="position-relative">
-              <h2 class="text-center tableUprHead mb-2">Home </h2>
+              <h2 class="text-center tableUprHead mb-2">Enrollees </h2>
               <div class="text-end mb-4">
                   <button class="getStartBtn " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                      Get started
+                    Enter New Enrollees
                   </button>
               </div>
-           
-          </div>
-             
               <div class="dataInfo table-responsive">
                   <table class="w-100" id="clubDataTable">
                       <thead>
                           <tr style="position: sticky;">
-                              <th class="tableHead">S.no</th>
-                              <th class="tableHead">Created By</th>
-                              <th class="tableHead">Club</th>
-                              <th class="tableHead">Name</th>
+                              <th class="tableHead">Entry #</th>
+                              <th class="tableHead">Enrolled by</th>
+                              <th class="tableHead">Society</th>
+                              <th class="tableHead">Enrollee</th>
                               <th class="tableHead">Created at</th>
                           </tr>
                       </thead>
@@ -51,10 +47,10 @@ $user = auth()->user();
                     <div class="col-lg-12">
 
 
-                        <h3 class="landingHeading mb-4">Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit.
+                        <h3 class="landingHeading mb-4">Enrollees
                         </h3>
                         <button class="getStartBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                            Get started
+                            Enter New Enrollees
                         </button>
                     </div>
                 </div>
@@ -72,7 +68,7 @@ $user = auth()->user();
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header d-block position-relative">
-                    <h1 class="modal-title  text-center" id="staticBackdropLabel">Add Data</h1>
+                    <h1 class="modal-title  text-center" id="staticBackdropLabel">Enter New Enrollees</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close"></button>
                 </div>
                 <form action="" id="ClubDataForm">
@@ -104,7 +100,7 @@ $user = auth()->user();
                 </form>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn submitBtn" data-bs-dismiss="modal" id="close">Close</button>
-                    <button type="button" class="btn submitBtn" id="Understood">Submit</button>
+                    <button type="button" class="btn submitBtn" id="Understood">Submit Enrollees</button>
                 </div>
             </div>
         </div>
@@ -132,10 +128,10 @@ $user = auth()->user();
       document.getElementById('logoutUser').addEventListener('click', function(e) {
         e.preventDefault(); 
             var logoutLink = $(this).attr('href');
-            var confirmation = confirm("Are you sure you want to log out?");
-            if(confirmation) {
+            // var confirmation = confirm("Are you sure you want to log out?");
+            // if(confirmation) {
                 window.location.href = logoutLink;
-            }
+            // }
       });
     </script>
     @endpush

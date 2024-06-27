@@ -14,7 +14,7 @@ $(document).ready(function() {
             { data: 'email', name: 'email' },
             { data: 'status', name: 'status' },
             { data: 'created_at', name: 'created_at'},
-            { data: 'action', name: 'action', orderable: false, searchable: false},
+            // { data: 'action', name: 'action', orderable: false, searchable: false},
         ],
         ...defaultDatatableSettings
     });
