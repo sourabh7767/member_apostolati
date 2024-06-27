@@ -37,10 +37,10 @@
                   <table class="w-100">
                       <thead>
                           <tr>
-                              <th class="tableHead">S.no</th>
-                              <th class="tableHead">Created by</th>
-                              <th class="tableHead">Club</th>
-                              <th class="tableHead">Name</th>
+                              <th class="tableHead">Entry #</th>
+                              <th class="tableHead">Enrolled by</th>
+                              <th class="tableHead">Society</th>
+                              <th class="tableHead">Enrollee</th>
                               <th class="tableHead">Created At</th>
                           </tr>
                       </thead>
