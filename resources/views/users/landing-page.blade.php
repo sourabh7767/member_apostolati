@@ -24,10 +24,10 @@
         </div> --}}
         <section class="table-section w-100">
           {{-- <div class="position-relative"> --}}
-              <h2 class="text-center tableUprHead mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h2>
+              <h2 class="text-center tableUprHead mb-2">Enrollees </h2>
               <div class="text-end mb-4">
                   <button class="getStartBtn " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                      Get started
+                    Enter New Enrollees
                   </button>
               </div>
            
@@ -37,36 +37,41 @@
                   <table class="w-100">
                       <thead>
                           <tr>
-                              <th class="tableHead">First</th>
-                              <th class="tableHead">Second</th>
-                              <th class="tableHead">third</th>
-                              <th class="tableHead">fourth</th>
+                              <th class="tableHead">S.no</th>
+                              <th class="tableHead">Created by</th>
+                              <th class="tableHead">Club</th>
+                              <th class="tableHead">Name</th>
+                              <th class="tableHead">Created At</th>
                           </tr>
                       </thead>
                       <tbody>
                           <tr>
-                              <td class="tableData">These are Apple</td>
-                              <td class="tableData">These are Red</td>
-                              <td class="tableData">These are red.</td>
-                              <td class="tableData">These are orange</td>
+                              <td class="tableData">1</td>
+                              <td class="tableData">Andrew</td>
+                              <td class="tableData">The Purgatorial Society of St. Andrew Avellino</td>
+                              <td class="tableData">Andrew Name</td>
+                              <td class="tableData">July 27, 2024</td>
                           </tr>
                           <tr>
-                              <td class="tableData">Pear</td>
-                              <td class="tableData">Green</td>
-                              <td class="tableData">These are green.</td>
-                              <td class="tableData">orange</td>
+                              <td class="tableData">2</td>
+                              <td class="tableData">Andrew</td>
+                              <td class="tableData">The Society of St. Margaret of Cortona</td>
+                              <td class="tableData">Andrew Name</td>
+                              <td class="tableData">July 26, 2024</td>
                           </tr>
                           <tr>
-                              <td class="tableData">Mango</td>
-                              <td class="tableData">Orange</td>
-                              <td class="tableData">These are orange.</td>
-                              <td class="tableData">orange</td>
+                              <td class="tableData">3</td>
+                              <td class="tableData">Andrew</td>
+                              <td class="tableData">The Purgatorial Society of St. Andrew Avellino</td>
+                              <td class="tableData">Andrew Name</td>
+                              <td class="tableData">July 25, 2024</td>
                           </tr>
                           <tr>
-                              <td class="tableData">Passion Fruit</td>
-                              <td class="tableData">Green</td>
-                              <td class="tableData">These are green.</td>
-                              <td class="tableData">orange</td>
+                              <td class="tableData">4</td>
+                              <td class="tableData">Andrew</td>
+                              <td class="tableData">The Purgatorial Society of St. Andrew Avellino.</td>
+                              <td class="tableData">Andrew Name</td>
+                              <td class="tableData">July 24, 2024</td>
                           </tr>
                       </tbody>
                   </table>
@@ -83,7 +88,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header d-block position-relative">
-                    <h1 class="modal-title  text-center" id="staticBackdropLabel">Modal title</h1>
+                    <h1 class="modal-title  text-center" id="staticBackdropLabel">Enter your Enrollees</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -111,7 +116,7 @@
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn submitBtn" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn submitBtn">Understood</button>
+                    <button type="button" class="btn submitBtn">Submit Enrollees</button>
                 </div>
             </div>
         </div>

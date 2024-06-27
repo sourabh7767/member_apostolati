@@ -28,10 +28,10 @@
                         <span class="user-name fw-bolder">{{$userObj->full_name ? $userObj->full_name : $userObj->first_name}}</span>
                         <span class="user-status">{{$userObj->getUserRole->title??''}}</span>
                     </div>
-                    <span class="avatar">
+                    {{-- <span class="avatar">
                         <img class="round" src="{{$userObj->profile_image ? asset("storage/images/$userObj->profile_image") : asset('images/theme/portrait/small/avatar-s-11.jpg')}}" alt="avatar" height="40" width="40">
                         <span class="avatar-status-online"></span>
-                    </span>
+                    </span> --}}
                 </a>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
                     <a class="dropdown-item" href="{{route('admin.profile')}}"><i class="me-50" data-feather="user"></i> Profile</a>
